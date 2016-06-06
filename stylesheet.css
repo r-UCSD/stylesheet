@@ -1,0 +1,540 @@
+/* Welcome
+----------
+Hello, faithful mod!
+
++      o     +              o
+    +             o     +       +
+o          +
+    o  +           +        +
++        o     o       +        o
+-_-_-_-_-_-_-_,------,      o
+_-_-_-_-_-_-_-|   /`_/`
+-_-_-_-_-_-_-~|__( ^ .^)  +     +
+_-_-_-_-_-_-_-""  ""
++      o         o   +       o
+    +         +
+o        o         o      o     +
+    o           +
++      +     o        o      +
+
+Now, some general guidelines from your founder (spleeyah).
+
+1) Try not to screw anything up. :]
+2) Please use two-space indent, not 4-space, not tab.
+3) Please document your CSS.
+4) Please keep line lengths at or under 80 characters. (my Python is showing)
+5) No trailing whitespace!
+6) Please use the one true bracing style. http://en.wikipedia.org/wiki/1TBS
+7) When in doubt, play around on a test subreddit.
+
+Good luck!
+*/
+/* -------------------------------------------------------------------------- */
+/* Sticky Comments
+-------------
+*/
+/*.comments-page .thing.id-t3_25tfht.link {
+  margin-top: 215px;
+}
+.comments-page .thing.id-t1_chkuxyj.comment {
+  width: 700px;
+  height: 186px;
+  position: absolute;
+  top: 145px;
+  left: 15px;
+}*/
+
+/* -------------------------------------------------------------------------- */
+/* Announcement Banner
+----------------------
+This is enabled by styling an <h4> in the sidebar, which in markdown looks like:
+
+#### Announcements: [My Link](/foo) etc.
+
+To disable the announcements bar, comment out from here until "END ANNOUNCEMENT
+BANNER" and/or remove the <h4> from the sidebar. As a side-effect, this means we
+can't use any <h4>'s in the sidebar. Oh well.
+*/
+.content {
+   margin-top: 56px !important;
+}
+.titlebox .md h4 {
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 8px;
+  z-index: 9999;
+  background-color: #fff !important;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+       -o-border-radius: 5px;
+          border-radius: 5px;
+  padding: 10px !important;
+  border: 1px solid #F0F0E6;
+}
+.titlebox .md h4 a {
+  font-weight: normal; /* we don't want links in the banner to be bolded */
+}
+/* END ANNOUNCEMENT BANNER */
+/* -------------------------------------------------------------------------- */
+/* Mod Badges
+-------------
+To add any new mods, just copy+pasta.
+*/
+.author[href$="/user/spleeyah"]:after,
+.author[href$="/user/apowers"]:after,
+.author[href$="/user/inconditus"]:after,
+.author[href$="/user/Nervette"]:after,
+.author[href$="/user/The_Wookie"]:after,
+.author[href$="/user/got-to-be-kind"]:after,
+.author[href$="/user/junkimchi"]:after,
+.author[href$="/user/ThumbtacksArePointy"]:after {
+  content: " ";
+  background-image: url(%%sprite-reddit%%);
+  background-position: -34px -612px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  left: 2px;
+}
+.side .content li .author[href$="/user/UCSD"],
+.side .content li .author[href$="/user/SEO_Nuke"] {
+  display: none;
+}
+/* END MOD BADGES */
+/* Ask an Alum post
+-------------
+https://www.reddit.com/r/UCSD/comments/4cjpi0/ask_an_alum/
+*/
+#siteTable_t3_4cjpi0 .down { display: none; }
+#siteTable_t3_4cjpi0 .author[href$="/user/arvindsatya"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/brianbsantacruz"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/daewang888"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/StrikerXVI"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/ffeli2098"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/helena_li"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/kmdsouthbay"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/rachelcorell"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/eletta"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/essayareayaitch"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/valgaze"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/spleeyah"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/Shaetan"]:after,
+#siteTable_t3_4cjpi0 .author[href$="/user/lisam_ucsd"]:after {
+  background-color: #FF0011;
+  width: auto;
+  padding: 2px 7px 0px 7px;
+  height: 16px;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  margin-left: 5px;
+  position: relative;
+  top: -1px;
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/arvindsatya"]:after {
+  content: "Arvind S・Revelle・Computer Science";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/brianbsantacruz"]:after {
+  content: "Brian B・Revelle・Physics (2009)";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/daewang888"]:after {
+  content: "David W・Warren・Chemical Engineering (2009)";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/StrikerXVI"]:after {
+  content: "Edgar C・Revelle・Psychology & Biology (2009)";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/ffeli2098"]:after {
+  content: "Felipe C・Revelle・Chemical Engineering";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/helena_li"]:after {
+  content: "Helena L・Revelle・Econ, Chinese Studies, Education (2009)";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/kmdsouthbay"]:after {
+  content: "Kevin D・ERC・Economics";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/rachelcorell"]:after {
+  content: "Rachel C・Revelle・Psychology & Theatre (2006)";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/eletta"]:after {
+  content: "Richard C・Warren・Mechanical Engineering";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/essayareayaitch"]:after {
+  content: "Sarah K・Revelle・Management Science (2003)";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/valgaze"]:after {
+  content: "Victor A・ERC・Management Science (2009)";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/spleeyah"]:after {
+  content: "Brandon C・Marshall・Computer Science (2012)";
+  background-image: none;
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/Shaetan"]:after {
+  content: "Hooman H・Warren・Bioengineering: Biotech (2011)";
+}
+#siteTable_t3_4cjpi0 .author[href$="/user/lisam_ucsd"]:after {
+  content: "Lisa M・Warren・Computer Engineering/Computer Science (2010)";
+}
+/* END ASK AN ALUM */
+/* -------------------------------------------------------------------------- */
+/* Hide "created by"
+--------------------
+The dude who created /r/UCSD abandonded it long ago. Spleeyah took it over
+sometime in 2010, I think.
+*/
+.side .titlebox .bottom {
+  color: #fff !important;
+}
+.side .titlebox .bottom .author {
+  display: none;
+}
+.side .titlebox .bottom .age {
+  color: gray !important;
+}
+/* END HIDE CREATED BY */
+/* -------------------------------------------------------------------------- */
+/* Sidebar Modifications
+------------------------
+Replacing text, taking over the world, etc. I chose the digits of pi as decimals
+for "readers" and "here now" for no particular reason, really. Hopefully it
+makes some people scratch their head for some underlying meaning. :)
+*/
+/* replace "readers" with something else */
+div.titlebox .subscribers span.word {
+  display: none;
+}
+/* "readers" prefix */
+/*div.titlebox .subscribers span.number:before {
+  content: "32,";
+}*/
+/* "readers" suffix */
+div.titlebox .subscribers span.number:after {
+  content: ".1415 Tritons";
+}
+/* replace "users here now" with something else */
+div.titlebox .users-online span.word {
+  display: none;
+}
+/* "here now" prefix */
+/*div.titlebox .users-online span.number:before {
+  content: "32,";
+}*/
+/* "here now" suffix */
+div.titlebox .users-online span.number:after {
+  content: ".9265 Tritons Tritoning now";
+}
+/* END SIDEBAR MODIFICATIONS */
+/* -------------------------------------------------------------------------- */
+/* Main Styles
+--------------
+What makes the /r/ look like it does. I usually try to keep it similar to
+ucsd.edu, but if somebody wants to make a new design at some point, feel free.
+*/
+body {
+  background: #146B93 url(%%ucsd-trident%%) no-repeat fixed center center;
+}
+/* Header background gradient */
+#header {
+  background: #0B4A67 url(%%header-bg%%) bottom center repeat-x !important;
+  border-bottom-color: #0B4A67;
+}
+#header-bottom-left {
+  padding-top: 15px;
+}
+#header, #header a, .separator {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+/* Main body of posts (not sidebar) */
+.content {
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+       -o-border-radius: 5px;
+          border-radius: 5px;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 338px;
+  padding: 10px !important;
+  border: 1px solid #F0F0E6;
+}
+/* The sidebar */
+.side {
+  margin: 8px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #F0F0E6;
+  background-color: #fff !important;
+  padding: 10px;
+}
+.side a,
+.sidebox .spacer,
+.titlebox form.toggle,
+.leavemoderator {
+  background-color: transparent !important;
+}
+.side hr {
+  border: 0px;
+  border-bottom: 1px solid gray;
+  padding-top: 6px;
+  margin-bottom: 6px;
+}
+/* The currently highlighted post. This might only be for RES users. */
+.content .thing .entry.keyHighlight {
+    outline-width: 0;
+    border-right: 2px solid #0B4A67;
+}
+.keyHighlightSuper {
+    outline-width: 0;
+    background-color:green;
+    border-right: 2px solid #0B4A67;
+}
+/* "My Reddits" Link */
+.drop-choices a,
+.dropdown.srdrop .selected {
+  color: #fff !important;
+}
+/* Top bar subreddit links */
+#sr-header-area {
+  background-color: transparent;
+  border-bottom-color: #0B4A67;
+}
+#sr-header-area a,
+#sr-header-area .selected a,
+#sr-header-area .sr-list .separator {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+.drop-choices {
+  background-color: #0B4A67 !important;
+}
+.flairselector.drop-choices {
+  background-color: #fff !important;
+}
+/* END MAIN STYLES */
+/* -------------------------------------------------------------------------- */
+/* Link Flair
+-------------
+Ghetto-ass linkflair added by inconditus.
+*/
+.linkflair {
+  outline-width: 0;
+  border-right: 2px solid #0B4A67;
+  background-color: #f0f3fc;
+}
+/* END LINK FLAIR */
+/* -------------------------------------------------------------------------- */
+/* User Flair
+-------------
+*/
+.flair {
+  color: #0B4A67;
+  padding: 2px 3px;
+  margin: 0 3px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+       -o-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.flair-dark-l33t {
+  color: #00F000;
+  background-color: #00000A;
+}
+
+/* END USER FLAIR */
+/* -------------------------------------------------------------------------- */
+/* Header/Footer
+----------------
+*/
+#header-bottom-right,
+#header-bottom-right a,
+#header-bottom-right .user,
+#sr-bar .separator {
+  background-color: #0B4A67 !important;
+  color: #fff !important;
+}
+.footer-parent {
+  background-color: #0B4A67 !important;
+  color: #fff !important;
+}
+.footer-parent a, .footer-parent li.title, .bottommenu {
+  color: #fff !important;
+}
+/* END HEADER/FOOTER */
+/* -------------------------------------------------------------------------- */
+/* Miscellaneous
+----------------
+Anything else I can't categorize.
+*/
+/* Menu bar */
+.tabmenu li a {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+
+  background: #0B4A67 !important;
+  color: #ffd730;
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #333;
+  border-bottom: 0px;
+}
+.tabmenu li.selected a {
+    font-weight: bold;
+    border-bottom: 0px;
+}
+/* UCSD title */
+.pagename a {
+  color: #fff !important;
+  text-transform: uppercase;
+  font-size: 150%;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  margin-right: 7px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a[href="/spacer"] {
+  width: 1px;
+  height: 20px;
+}
+/* END MISCELLANEOUS */
+/* -------------------------------------------------------------------------- */
+/* Rage Faces
+-------------
+Gotta love 'em. Shamelessly stolen from /r/f7u12, but probably way out of date.
+*/
+a[href="/troll"]:after, a[href="/pft"]:after, a[href="/wat"]:after,
+a[href="/yey"]:after, a[href="/surprised"]:after, a[href="/suprised"]:after,
+a[href="/ok"]:after, a[href="/happy"]:after, a[href="/hmm"]:after,
+a[href="/harpdarp"]:after, a[href="/notsure"]:after, a[href="/megusta"]:after,
+a[href="/megustaperfect"]:after {
+  width: 25px;
+  height: 25px;
+  content: "";
+  background-image: url(%%ragez%%);
+  display: inline-block
+}
+a[href="/megusta"]:after {
+  background-position: -120px -60px
+}
+a[href="/megustaperfect"]:after {
+  width: 60px;
+  height: 55px;
+  background-position: -30px -180px;
+}
+a[href="/troll"]:after {
+  background-position: -150px -60px;
+}
+a[href="/pft"]:after {
+  background-position: -270px -60px;
+}
+a[href="/happy"]:after {
+  background-position: -120px -30px;
+}
+a[href="/wat"]:after {
+  background-position: -180px -30px;
+}
+a[href="/yey"]:after {
+background-position: -210px -30px;
+}
+a[href="/notsure"]:after {
+  height: 34px;
+  background-position: 0px -180px;
+}
+a[href="/ok"]:after {
+  width: 30px;
+  background-position: 0px -150px;
+}
+a[href="/hmm"]:after {
+  width: 26px;
+  height: 28px;
+  background-position: -210px -120px;
+}
+a[href="/harpdarp"]:after {
+  width: 40px;
+  height: 40px;
+  background-position: -60px -90px;
+}
+a[href="/surprised"]:after, a[href="/suprised"]:after,
+a[href="/awyeah"]:after, a[href="/awyea"]:after {
+  width: 25px;
+  height: 25px;
+  content: "";
+  background-image: url(%%ragez-new%%);
+  display: inline-block;
+}
+a[href="/surprised"]:after, a[href="/suprised"]:after {
+  background-position: -136px -44px;
+}
+a[href="/awyeah"]:after, a[href="/awyea"]:after {
+  width: 65px;
+  height: 40px;
+  background-position: -136px 0px;
+}
+a[href="/fap"]:after, a[href="/schlick"]:after,
+a[href="/yuno"]:after, a[href="/foreveralonelaugh"]:after {
+  content: "";
+  background-image: url(%%new-rage%%);
+  display: inline-block;
+}
+a[href="/fap"]:after {
+  width: 40px;
+  height: 45px;
+  background-position: -46px -85px;
+}
+a[href="/schlick"]:after {
+  width: 39px;
+  height: 45px;
+  background-position: -86px -85px;
+}
+a[href="/yuno"]:after {
+  width: 45px;
+  height: 43px;
+  background-position: 0px -41px;
+}
+a[href="/foreveralonelaugh"]:after {
+  width: 95px;
+  height: 90px;
+  background-position: -205px 0px;
+}
+/* Advice animals */
+a[href="/sapenguin"]:after {
+  width: 25px;
+  height: 40px;
+  content: "";
+  background-image: url(%%advice-animals%%);
+  background-position: -39px 0;
+  display: inline-block;
+}
+/* Other crap */
+a[href="/ucsd"]:after {
+  width: 50px;
+  height: 32px;
+  content: "";
+  background-image: url(%%ucsd%%);
+  background-position: top left;
+  display: inline-block;
+}
+a[href="/awwwyeahhh"]:after {
+  width: 150px;
+  height: 99px;
+  content: "";
+  background-image: url(%%awwwyeahhh%%);
+  background-position: top left;
+  display: inline-block;
+}
+/* END RAGE FACES */
+/* -------------------------------------------------------------------------- */
+/*
+<3 spleeyah
+*/
