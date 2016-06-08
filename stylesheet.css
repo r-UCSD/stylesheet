@@ -235,20 +235,24 @@ What makes the /r/ look like it does. I usually try to keep it similar to
 ucsd.edu, but if somebody wants to make a new design at some point, feel free.
 */
 body {
-  background: #146B93 url(%%ucsd-trident%%) no-repeat fixed center center;
+  background: #13294B url(%%ucsd-trident-4%%) no-repeat fixed center center;
 }
 /* Header background gradient */
 #header {
-  background: #0B4A67 url(%%header-bg%%) bottom center repeat-x !important;
-  border-bottom-color: #0B4A67;
+  background: url(%%geisel-wss-6%%);
+  background-repeat: yes;
+  background-position: center top;
+  height: 200px;
+  color: #fff;
+  border-bottom-color: #ffdf05 !important;
+  text-shadow: 0 1px 0 #000 !important;
 }
-#header-bottom-left {
-  padding-top: 15px;
+
+#header-bottom-left { position: absolute; bottom: 0; }
+.content {
+  margin-top: 56px !important
 }
-#header, #header a, .separator {
-  background-color: transparent !important;
-  color: #fff !important;
-}
+
 /* Main body of posts (not sidebar) */
 .content {
   background-color: #fff;
@@ -261,7 +265,7 @@ body {
   margin-left: 8px;
   margin-right: 338px;
   padding: 10px !important;
-  border: 1px solid #F0F0E6;
+  border: 1px solid #ffdf05;
 }
 /* The sidebar */
 .side {
@@ -269,15 +273,15 @@ body {
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-  border: 1px solid #F0F0E6;
-  background-color: #fff !important;
+  border: 1px solid #ffdf05;
+  background-color: #fff;
   padding: 10px;
 }
 .side a,
 .sidebox .spacer,
 .titlebox form.toggle,
 .leavemoderator {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .side hr {
   border: 0px;
@@ -298,21 +302,32 @@ body {
 /* "My Reddits" Link */
 .drop-choices a,
 .dropdown.srdrop .selected {
-  color: #fff !important;
+  color: #13294B !important;
+  text-shadow: none !important;
 }
 /* Top bar subreddit links */
 #sr-header-area {
-  background-color: transparent;
-  border-bottom-color: #0B4A67;
+  background-color: rgba(255,223,5, 0.25);
+  color: #13294B !important;
+  border-bottom-color: #ffdf05 !important;
 }
+
+#sr-header-area:hover {
+     -moz-transition: all .2s ease-in;
+       -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+          transition: all .2s ease-in;
+  background-color: rgba(255,223,5, 0.875);
+}
+
 #sr-header-area a,
 #sr-header-area .selected a,
 #sr-header-area .sr-list .separator {
-  color: #fff !important;
-  background-color: transparent !important;
+  color: #13294B !important;
+  text-shadow: none !important;
 }
 .drop-choices {
-  background-color: #0B4A67 !important;
+  background-color: rgba(255,223,5, 0.875);
 }
 .flairselector.drop-choices {
   background-color: #fff !important;
@@ -358,15 +373,19 @@ Ghetto-ass linkflair added by inconditus.
 #header-bottom-right a,
 #header-bottom-right .user,
 #sr-bar .separator {
-  background-color: #0B4A67 !important;
-  color: #fff !important;
+  background-color: #ffdf05 !important;
+  color: #13294B  !important;
+  text-shadow: none !important;
 }
 .footer-parent {
-  background-color: #0B4A67 !important;
-  color: #fff !important;
+  background-color: #ffdf05;
+  color: #ffdf05;
+  padding-bottom:50px !important;
+  border-color: #13294B !important;
 }
 .footer-parent a, .footer-parent li.title, .bottommenu {
-  color: #fff !important;
+  color: #13294B !important;
+  border-color: #13294B !important;
 }
 /* END HEADER/FOOTER */
 /* -------------------------------------------------------------------------- */
@@ -375,23 +394,33 @@ Ghetto-ass linkflair added by inconditus.
 Anything else I can't categorize.
 */
 /* Menu bar */
-.tabmenu li a {
+#header .tabmenu li a {
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
   -moz-border-radius-topright: 5px;
   -webkit-border-top-right-radius: 5px;
-
-  background: #0B4A67 !important;
-  color: #ffd730;
-  font-weight: normal;
+  font-variant: small-caps;
+  background-color: rgba(19, 41, 75, 0.5) !important;
+  font-weight: bold;
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid #333;
+  text-shadow: 0 1px 0 #000;
+  color: #fff !important;
+  border: 1px solid #ffdf05;
   border-bottom: 0px;
 }
-.tabmenu li.selected a {
-    font-weight: bold;
-    border-bottom: 0px;
+
+#header .tabmenu li:hover a {
+  background-color: rgba(19, 41, 75, 0.75) !important;
+  color: #fff !important;
+}
+
+#header .tabmenu li.selected a {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(19, 41, 75, 1.0) !important;
+  border-bottom: 0px;
+  color: #fff !important;
 }
 /* UCSD title */
 .pagename a {
@@ -399,6 +428,7 @@ Anything else I can't categorize.
   text-transform: uppercase;
   font-size: 150%;
   font-weight: normal;
+  text-shadow: 0 1px 0 #000;
   letter-spacing: 0.1em;
   margin-right: 7px;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -407,6 +437,46 @@ a[href="/spacer"] {
   width: 1px;
   height: 20px;
 }
+/* Upvote/downvote buttons */
+.midcol {
+  width: 20px;
+  overflow:visible;
+}
+
+.comment .midcol{
+  position:relative;
+  padding:10px 10px 10px 10px;
+}
+
+div.up {
+  width: 20px !important;
+  height: 28px !important;
+  background: url(%%voteicons-5%%) !important;
+  background-repeat: no-repeat !important;
+  background-position: 0px 0px !important
+}
+div.upmod {
+  width: 20px !important;
+  height: 28px !important;
+  background: url(%%voteicons-5%%) !important;
+  background-repeat: no-repeat !important;
+  background-position: -20px 0px !important
+}
+div.down {
+  width: 20px !important;
+  height: 20px !important;
+  background: url(%%voteicons-5%%) !important;
+  background-repeat: no-repeat !important;
+  background-position: 0px -32px !important
+}
+div.downmod {
+  width: 20px !important;
+  height: 20px !important;
+  background: url(%%voteicons-5%%) !important;
+  background-repeat: no-repeat !important;
+  background-position: -20px -32px !important
+}
+
 /* END MISCELLANEOUS */
 /* -------------------------------------------------------------------------- */
 /* Rage Faces
@@ -534,7 +604,125 @@ a[href="/awwwyeahhh"]:after {
   display: inline-block;
 }
 /* END RAGE FACES */
+/* night mode version below - /u/richniggatimeline */
+.res-nightmode #header {
+  background: url(%%geisel-night%%);
+  background-repeat: yes;
+  background-position: center top;
+  height: 200px;
+  border-bottom-color: #6e7f80;
+}
+
+.res-nightmode #header .tabmenu li:hover a {
+  background-color: rgba(54,69,79,0.75) !important;
+}
+
+.res-nightmode #header .tabmenu li.selected a {
+  text-transform: uppercase;
+  border: 2px solid #6e7f80;
+  background-color: rgba(54,69,79,1.0) !important;
+  border-bottom: 0px;
+}
+.res-nightmode #header .tabmenu li a {
+       -moz-border-radius-topleft: 5px;
+   -webkit-border-top-left-radius: 5px;
+      -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  font-weight: bold;
+  padding-left: 10px;
+  font-variant: small-caps;
+  background-color: rgba(54,69,79,0.5) !important;
+  padding-right: 10px;
+  text-shadow: 0 1px 0 #000;
+  border: 1px solid #6e7f80;
+  border-bottom: 0px
+}
+
+.res-nightmode .content {
+  background-color: #536878;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 338px;
+  padding: 10px !important;
+  border: 1px solid #6e7f80
+}
+
+.res-nightmode .footer-parent {
+  background-color: #536878;
+  color: #ffdf05;
+  padding-bottom:50px !important;
+  border-color: #6e7f80 !important;
+}
+
+.res-nightmode .footer-parent a, 
+.res-nightmode .footer-parent li.title, 
+.res-nightmode .bottommenu {
+  color: #6e7f80 !important;
+  border-color: #6e7f80 !important;
+}
+
+.res-nightmode #header-bottom-right, 
+.res-nightmode #header-bottom-right a, 
+.res-nightmode #header-bottom-right .user, 
+.res-nightmode #sr-bar .separator {
+  color: #fff;
+  background-color: #536878;
+}
+
+.res-nightmode #sr-header-area {
+  background-color: rgba(83,104,120,0.5) !important;
+  color: rgba(255,255,255,0.5) !important;
+  border-bottom-color: #536878;
+}
+
+.res-nightmode #sr-header-area a,
+.res-nightmode #sr-header-area .selected a,
+.res-nightmode #sr-header-area .sr-list .separator {
+  color: #rgba(255,255,255,0.55);
+}
+
+.res-nightmode #sr-header-area:hover {
+     -moz-transition: all .2s ease-in;
+       -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+          transition: all .2s ease-in;
+  background-color: rgba(83,104,120,0.75) !important;
+}
+
+.res-nightmode .side {
+  margin: 8px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #6e7f80;
+  padding: 10px;
+}
+
+.res-nightmode .side hr,
+.res-nightmode .sidecontentbox .content {
+  width: 263px !important;
+  border: 1px solid #6e7f80;
+}
+
+.res-nightmode .side .titlebox .bottom {
+  color: transparent !important;
+}
+.res-nightmode .side .titlebox .bottom .author {
+  display: none;
+}
+
+.res-nightmode #sr-header-area a, 
+.res-nightmode #sr-header-area .selected a, 
+.res-nightmode #sr-header-area .sr-list .separator {
+  color: rgba(255,255,255,0.5) !important;
+}
 /* -------------------------------------------------------------------------- */
 /*
 <3 spleeyah
+minor appearance updates in 2016 - richniggatimeline
 */
