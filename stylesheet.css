@@ -1421,7 +1421,7 @@ a[href="/awwwyeahhh"]:after {
        -o-transition: all .2s ease-in;
   -webkit-transition: all .2s ease-in;
           transition: all .2s ease-in;
-  background-color: rgba(83,104,120,0.75) !important;
+  background-color: rgba(83,104,120,1.0) !important;
 }
 
 .res-nightmode .side {
